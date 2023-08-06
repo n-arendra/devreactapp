@@ -5,7 +5,7 @@ pipeline {
     environment {
         DOCKERHUB_USERNAME = credentials('dockerhub-username')
         DOCKERHUB_PASSWORD = credentials('dockerhub-password')
-        DOCKER_IMAGE_NAME = 'krish2356/devractapp'
+        DOCKER_IMAGE_NAME = 'beingnaren/devractapp'
         GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
         DOCKER_IMAGE_TAG = "app-${env.BUILD_NUMBER}-${GIT_COMMIT}"
     }
